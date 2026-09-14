@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>高中数学工具</title>
+    <link rel="icon" type="image/jpeg" href="../assets/wechat-qr.jpg">
+    <link rel="stylesheet" href="./license.css">
+    <link rel="stylesheet" href="./function-plot.css">
+    <link rel="stylesheet" href="./tool-center.css">
+  </head>
+  <body>
+    <main class="tool-center-shell">
+      <header class="tool-center-header">
+        <div class="tool-tabs" role="tablist" aria-label="工具页面">
+          <button id="functionPlotTab" class="tool-tab active" type="button" role="tab" aria-selected="true" aria-controls="functionPlotPanel" data-view="function-plot">函数绘图</button>
+          <button id="licenseTab" class="tool-tab" type="button" role="tab" aria-selected="false" aria-controls="licensePanel" data-view="license" tabindex="-1">授权中心</button>
+        </div>
+      </header>
+      <section id="functionPlotPanel" class="tool-view active" role="tabpanel" aria-labelledby="functionPlotTab" data-panel="function-plot">
+        <div id="functionPlotRoot"><p class="editor-loading">函数绘图正在加载…</p></div>
+      </section>
+      <section id="licensePanel" class="tool-view" role="tabpanel" aria-labelledby="licenseTab" data-panel="license" hidden>
+        <div id="licenseRoot"><p class="license-loading">授权信息正在加载…</p></div>
+      </section>
+    </main>
+
+    <script>window.HSM_TASK_PANE_NAME = "tool-center";</script>
+    <script src="../js/plot-config.js"></script>
+    <script src="../js/plot-analysis.js"></script>
+    <script src="../js/plotter.js"></script>
+    <script src="../js/plot-library.js"></script>
+    <script src="../js/ppt-api.js"></script>
+    <script src="../js/taskpane.js"></script>
+    <script src="../js/vendor/tweetnacl-fast.min.js"></script>
+    <script src="../js/license-public-key.js"></script>
+    <script src="../js/license.js"></script>
+    <script src="../js/function-plot-document.js"></script>
+    <script src="./function-plot-entry.js"></script>
+    <script src="./license-entry.js"></script>
+    <script src="./function-plot.js"></script>
+    <script src="./function-analysis.js"></script>
+    <script src="./license-ui.js"></script>
+    <script src="./tool-center.js"></script>
+  </body>
+</html>

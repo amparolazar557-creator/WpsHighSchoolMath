@@ -1,0 +1,531 @@
+html,
+body {
+  margin: 0;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  color: #172033;
+  background: #f3f6fa;
+  font-family: "Microsoft YaHei UI", "Segoe UI", sans-serif;
+}
+
+.editor-loading {
+  margin: 24px;
+  color: #526075;
+  font-size: 14px;
+}
+
+.function-shell,
+.function-shell * {
+  box-sizing: border-box;
+}
+
+.function-shell {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Keep actions outside the scrolling form in both standalone and shared panes. */
+.function-shell .function-content {
+  display: grid;
+  grid-auto-rows: max-content;
+  align-content: start;
+  gap: 10px;
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.function-shell .function-content:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: -2px;
+}
+
+.function-shell h1,
+.function-shell h2,
+.function-shell p {
+  margin: 0;
+}
+
+.function-shell .editor-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 13px;
+  border-radius: 10px;
+  color: #fff;
+  background: linear-gradient(135deg, #173f8a, #2563eb);
+}
+
+.function-shell .editor-header h1 {
+  font-size: 18px;
+}
+
+.function-shell .editor-header p {
+  margin-top: 3px;
+  color: #dbeafe;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.function-shell .mode-badge {
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 999px;
+  color: #eff6ff;
+  background: rgba(255, 255, 255, 0.13);
+  font-size: 11px;
+}
+
+.function-shell .mode-badge.editing {
+  border-color: #fde68a;
+  color: #422006;
+  background: #fef3c7;
+}
+
+.function-shell .editor-card,
+.function-shell .preview-card,
+.function-shell .advanced-settings {
+  min-width: 0;
+  border: 1px solid #d6dce7;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.function-shell .editor-card,
+.function-shell .preview-card {
+  padding: 10px;
+}
+
+.function-shell .expression-heading,
+.function-shell .expression-main,
+.function-shell .preview-heading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+}
+
+.function-shell .expression-heading {
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.function-shell .expression-heading h2,
+.function-shell .preview-heading h2 {
+  font-size: 14px;
+}
+
+.function-shell .expression-heading p,
+.function-shell .preview-heading span {
+  margin-top: 2px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.function-shell .heading-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.function-shell .expression-rows {
+  display: grid;
+  gap: 6px;
+}
+
+.function-shell .expression-prefix {
+  flex: 0 0 auto;
+  color: #475569;
+  font-family: "Cambria Math", serif;
+  font-size: 15px;
+}
+
+.function-shell input,
+.function-shell select,
+.function-shell textarea,
+.function-shell button {
+  font: inherit;
+}
+
+.function-shell input,
+.function-shell select,
+.function-shell textarea {
+  width: 100%;
+  margin-top: 4px;
+  padding: 7px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  color: #172033;
+  background: #fff;
+}
+
+.function-shell .expression-row {
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid #d6dce7;
+  border-radius: 7px;
+}
+
+.function-shell .expression-row.invalid {
+  border-color: #b91c1c;
+  background: #fff7f7;
+}
+
+.function-shell .curve-settings {
+  margin-top: 7px;
+}
+
+.function-shell .curve-settings summary {
+  color: #475569;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.function-shell .curve-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.function-shell .curve-grid label {
+  min-width: 0;
+}
+
+.function-shell .curve-color {
+  height: 33px;
+  padding: 3px;
+}
+
+.function-shell .curve-visible-label {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: center;
+  gap: 5px;
+}
+
+.function-shell .curve-visible {
+  width: auto;
+  margin: 0;
+}
+
+.function-shell .field-help {
+  margin-top: 7px;
+  color: #526075;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.function-shell textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+.function-shell select {
+  min-height: 33px;
+}
+
+.function-shell select:focus-visible,
+.function-shell textarea:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.function-shell button:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.function-shell .expression-input {
+  min-width: 0;
+  margin: 0;
+}
+
+.function-shell button {
+  min-width: 0;
+  min-height: 34px;
+  padding: 6px 9px;
+  border: 1px solid #b8c2d2;
+  border-radius: 6px;
+  color: #172033;
+  background: #fff;
+  cursor: pointer;
+}
+
+.function-shell button:hover {
+  border-color: #8ea2c2;
+  background: #eef3ff;
+}
+
+.function-shell button:focus-visible,
+.function-shell input:focus-visible,
+.function-shell summary:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.function-shell button.primary {
+  border-color: #1d4ed8;
+  color: #fff;
+  background: #1d4ed8;
+}
+
+.function-shell button.primary:hover {
+  background: #1e40af;
+}
+
+.function-shell .remove-expression,
+.function-shell button.compact {
+  min-height: 30px;
+  padding: 4px 8px;
+}
+
+.function-shell .remove-expression {
+  flex: 0 0 30px;
+  padding: 2px;
+  color: #b91c1c;
+}
+
+.function-shell .remove-expression:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.function-shell .presets {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.function-shell .presets button {
+  min-height: 31px;
+  padding: 5px 3px;
+  font-size: 12px;
+}
+
+.function-shell .advanced-settings {
+  overflow: hidden;
+}
+
+.function-shell .advanced-settings > summary {
+  padding: 10px 12px;
+  color: #334155;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  list-style-position: inside;
+}
+
+.function-shell .advanced-settings[open] > summary {
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.function-shell .advanced-content {
+  display: grid;
+  gap: 8px;
+  padding: 9px;
+}
+
+.function-shell fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 8px;
+  border: 1px solid #d6dce7;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.function-shell label,
+.function-shell legend {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.function-shell .range-grid,
+.function-shell .display-options,
+.function-shell .actions {
+  display: grid;
+  gap: 7px;
+}
+
+.function-shell .range-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.function-shell .display-options {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.function-shell .display-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  font-weight: 400;
+}
+
+.function-shell .display-options input {
+  width: auto;
+  margin: 0;
+}
+
+.function-shell .preview-heading {
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.function-shell .preview {
+  overflow: auto;
+  min-height: 210px;
+  padding: 5px;
+  border: 1px solid #d6dce7;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.function-shell .preview svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.function-shell .status {
+  min-height: 18px;
+  max-height: 4.5em;
+  overflow: auto;
+  overflow-wrap: anywhere;
+  color: #526075;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.function-shell .status.error {
+  color: #b91c1c;
+}
+
+.function-shell .function-footer {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  padding: 8px 10px 10px;
+  border-top: 1px solid #d6dce7;
+  background: #fff;
+}
+
+.function-shell .actions {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.function-shell .parameter-row + .parameter-row {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.function-shell .parameter-main {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr) 72px;
+  gap: 8px;
+  align-items: center;
+}
+
+.function-shell .parameter-main input {
+  min-width: 0;
+  margin: 0;
+}
+
+.function-shell input[type="range"] {
+  padding: 0;
+  accent-color: #2563eb;
+}
+
+.function-shell .parameter-settings {
+  margin-top: 10px;
+}
+
+.function-shell .analysis-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.function-shell .analysis-toggle input {
+  width: auto;
+  margin: 0;
+}
+
+.function-shell .analysis-results {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 360px) {
+  .function-shell .presets {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+.function-shell .parameter-limits,
+.function-shell .library-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.function-shell .parameter-limits label,
+.function-shell .library-actions button {
+  flex: 1 1 60px;
+  min-width: 0;
+}
+
+@media (min-width: 540px) {
+  .function-shell .presets {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .function-shell .display-options {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 260px) {
+  .function-shell .presets,
+  .function-shell .range-grid,
+  .function-shell .display-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .function-shell .actions {
+    grid-template-columns: 1fr;
+  }
+
+  .function-shell .expression-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .function-shell .heading-actions {
+    justify-content: stretch;
+  }
+
+  .function-shell .heading-actions button {
+    flex: 1 1 auto;
+  }
+}

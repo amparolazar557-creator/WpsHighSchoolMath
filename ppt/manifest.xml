@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JsPlugin>
+  <ApiVersion>1.0.0</ApiVersion>
+  <Name>WpsHighSchoolMathPpt</Name>
+  <Description>高中数学快捷符号和函数图像演示工具</Description>
+</JsPlugin>
+

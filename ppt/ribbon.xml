@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnAddinLoad">
+  <ribbon startFromScratch="false">
+    <tabs>
+      <tab id="mathTeacherPptTab" label="高中数学">
+        <group id="relationGroup" label="关系运算">
+          <button id="sym_plus" label="+" onAction="OnAction" size="normal" screentip="加号"/>
+          <button id="sym_minus" label="−" onAction="OnAction" size="normal" screentip="减号"/>
+          <button id="sym_times" label="×" onAction="OnAction" size="normal" screentip="乘号"/>
+          <button id="sym_divide" label="÷" onAction="OnAction" size="normal" screentip="除号"/>
+          <button id="sym_plusminus" label="±" onAction="OnAction" size="normal" screentip="正负号"/>
+          <button id="sym_minusplus" label="∓" onAction="OnAction" size="normal" screentip="负正号"/>
+          <button id="sym_equal" label="=" onAction="OnAction" size="normal" screentip="等于"/>
+          <button id="sym_notequal" label="≠" onAction="OnAction" size="normal" screentip="不等于"/>
+          <button id="sym_approx" label="≈" onAction="OnAction" size="normal" screentip="约等于"/>
+          <button id="sym_equiv" label="≡" onAction="OnAction" size="normal" screentip="恒等于"/>
+          <button id="sym_lt" label="&lt;" onAction="OnAction" size="normal" screentip="小于"/>
+          <button id="sym_gt" label="&gt;" onAction="OnAction" size="normal" screentip="大于"/>
+          <button id="sym_le" label="≤" onAction="OnAction" size="normal" screentip="小于等于"/>
+          <button id="sym_ge" label="≥" onAction="OnAction" size="normal" screentip="大于等于"/>
+          <button id="sym_propto" label="∝" onAction="OnAction" size="normal" screentip="正比于"/>
+        </group>
+        <group id="setLogicGroup" label="集合逻辑">
+          <button id="sym_in" label="∈" onAction="OnAction" size="normal" screentip="属于"/>
+          <button id="sym_notin" label="∉" onAction="OnAction" size="normal" screentip="不属于"/>
+          <button id="sym_contains" label="∋" onAction="OnAction" size="normal" screentip="包含元素"/>
+          <button id="sym_subset" label="⊂" onAction="OnAction" size="normal" screentip="子集（传统符号）"/>
+          <button id="sym_subseteq" label="⊆" onAction="OnAction" size="normal" screentip="子集"/>
+          <button id="sym_proper_subset" label="⫋" onAction="OnAction" size="normal" screentip="真子集"/>
+          <button id="sym_superset" label="⊃" onAction="OnAction" size="normal" screentip="超集（传统符号）"/>
+          <button id="sym_superseteq" label="⊇" onAction="OnAction" size="normal" screentip="超集"/>
+          <button id="sym_proper_superset" label="⫌" onAction="OnAction" size="normal" screentip="真超集"/>
+          <button id="sym_union" label="∪" onAction="OnAction" size="normal" screentip="并集"/>
+          <button id="sym_intersection" label="∩" onAction="OnAction" size="normal" screentip="交集"/>
+          <button id="sym_empty" label="∅" onAction="OnAction" size="normal" screentip="空集"/>
+          <button id="sym_forall" label="∀" onAction="OnAction" size="normal" screentip="任意"/>
+          <button id="sym_exists" label="∃" onAction="OnAction" size="normal" screentip="存在"/>
+          <button id="sym_and" label="∧" onAction="OnAction" size="normal" screentip="且"/>
+          <button id="sym_or" label="∨" onAction="OnAction" size="normal" screentip="或"/>
+          <button id="sym_not" label="¬" onAction="OnAction" size="normal" screentip="非"/>
+          <button id="sym_implies" label="⇒" onAction="OnAction" size="normal" screentip="推出"/>
+          <button id="sym_iff" label="⇔" onAction="OnAction" size="normal" screentip="等价"/>
+        </group>
+        <group id="geometryGroup" label="平面几何">
+          <button id="sym_angle" label="∠" onAction="OnAction" size="normal" screentip="角"/>
+          <button id="sym_degree" label="°" onAction="OnAction" size="normal" screentip="度"/>
+          <button id="sym_perp" label="⊥" onAction="OnAction" size="normal" screentip="垂直"/>
+          <button id="sym_parallel" label="∥" onAction="OnAction" size="normal" screentip="平行"/>
+          <button id="sym_triangle" label="△" onAction="OnAction" size="normal" screentip="三角形"/>
+          <button id="sym_parallelogram" label="▱" onAction="OnAction" size="normal" screentip="平行四边形"/>
+          <button id="sym_arc" label="⌒" onAction="OnAction" size="normal" screentip="弧"/>
+          <button id="sym_circle" label="⊙" onAction="OnAction" size="normal" screentip="圆"/>
+          <button id="sym_congruent" label="≌" onAction="OnAction" size="normal" screentip="全等"/>
+          <button id="sym_similar" label="∽" onAction="OnAction" size="normal" screentip="相似"/>
+          <button id="sym_ray" label="→" onAction="OnAction" size="normal" screentip="射线或向量"/>
+          <button id="sym_line" label="↔" onAction="OnAction" size="normal" screentip="直线"/>
+          <button id="sym_because" label="∵" onAction="OnAction" size="normal" screentip="因为"/>
+          <button id="sym_therefore" label="∴" onAction="OnAction" size="normal" screentip="所以"/>
+        </group>
+        <group id="functionGroup" label="函数代数">
+          <button id="sym_sqrt" label="√" onAction="OnAction" size="normal" screentip="平方根"/>
+          <button id="sym_cuberoot" label="∛" onAction="OnAction" size="normal" screentip="立方根"/>
+          <button id="sym_abs" label="|x|" onAction="OnAction" size="normal" screentip="绝对值"/>
+          <button id="sym_infinity" label="∞" onAction="OnAction" size="normal" screentip="无穷"/>
+          <button id="sym_log" label="log" onAction="OnAction" size="normal" screentip="常用对数"/>
+          <button id="sym_ln" label="ln" onAction="OnAction" size="normal" screentip="自然对数"/>
+          <button id="sym_sin" label="sin" onAction="OnAction" size="normal" screentip="正弦"/>
+          <button id="sym_cos" label="cos" onAction="OnAction" size="normal" screentip="余弦"/>
+          <button id="sym_tan" label="tan" onAction="OnAction" size="normal" screentip="正切"/>
+          <button id="sym_cot" label="cot" onAction="OnAction" size="normal" screentip="余切"/>
+          <button id="sym_sec" label="sec" onAction="OnAction" size="normal" screentip="正割"/>
+          <button id="sym_csc" label="csc" onAction="OnAction" size="normal" screentip="余割"/>
+          <button id="sym_max" label="max" onAction="OnAction" size="normal" screentip="最大值"/>
+          <button id="sym_min" label="min" onAction="OnAction" size="normal" screentip="最小值"/>
+          <button id="sym_prime" label="′" onAction="OnAction" size="normal" screentip="撇号"/>
+          <button id="sym_doubleprime" label="″" onAction="OnAction" size="normal" screentip="双撇号"/>
+        </group>
+        <group id="calculusGroup" label="微积分">
+          <button id="sym_lim" label="lim" onAction="OnAction" size="normal" screentip="极限"/>
+          <button id="sym_delta" label="Δ" onAction="OnAction" size="normal" screentip="增量"/>
+          <button id="sym_sum" label="∑" onAction="OnAction" size="normal" screentip="求和"/>
+          <button id="sym_product" label="∏" onAction="OnAction" size="normal" screentip="连乘"/>
+          <button id="sym_integral" label="∫" onAction="OnAction" size="normal" screentip="积分"/>
+          <button id="sym_partial" label="∂" onAction="OnAction" size="normal" screentip="偏导"/>
+          <button id="sym_nabla" label="∇" onAction="OnAction" size="normal" screentip="梯度"/>
+        </group>
+        <group id="statisticsGroup" label="概率统计">
+          <button id="sym_probability" label="P(A)" onAction="OnAction" size="normal" screentip="概率"/>
+          <button id="sym_factorial" label="n!" onAction="OnAction" size="normal" screentip="阶乘"/>
+          <button id="sym_combination" label="C" onAction="OnAction" size="normal" screentip="组合数"/>
+          <button id="sym_permutation" label="A" onAction="OnAction" size="normal" screentip="排列数"/>
+          <button id="sym_mean" label="x̄" onAction="OnAction" size="normal" screentip="样本均值"/>
+          <button id="sym_mu" label="μ" onAction="OnAction" size="normal" screentip="总体均值"/>
+          <button id="sym_sigma" label="σ" onAction="OnAction" size="normal" screentip="标准差"/>
+          <button id="sym_omega" label="Ω" onAction="OnAction" size="normal" screentip="样本空间"/>
+        </group>
+        <group id="greekGroup" label="希腊字母">
+          <button id="sym_alpha" label="α" onAction="OnAction" size="normal"/>
+          <button id="sym_beta" label="β" onAction="OnAction" size="normal"/>
+          <button id="sym_gamma" label="γ" onAction="OnAction" size="normal"/>
+          <button id="sym_delta_lower" label="δ" onAction="OnAction" size="normal"/>
+          <button id="sym_epsilon" label="ε" onAction="OnAction" size="normal"/>
+          <button id="sym_zeta" label="ζ" onAction="OnAction" size="normal"/>
+          <button id="sym_eta" label="η" onAction="OnAction" size="normal"/>
+          <button id="sym_theta" label="θ" onAction="OnAction" size="normal"/>
+          <button id="sym_lambda" label="λ" onAction="OnAction" size="normal"/>
+          <button id="sym_mu_greek" label="μ" onAction="OnAction" size="normal"/>
+          <button id="sym_pi" label="π" onAction="OnAction" size="normal"/>
+          <button id="sym_rho" label="ρ" onAction="OnAction" size="normal"/>
+          <button id="sym_sigma_greek" label="σ" onAction="OnAction" size="normal"/>
+          <button id="sym_phi" label="φ" onAction="OnAction" size="normal"/>
+          <button id="sym_omega_lower" label="ω" onAction="OnAction" size="normal"/>
+        </group>
+        <group id="functionPlotGroup" label="函数图像">
+          <button id="function_plot" label="函数编辑器" onAction="OnAction" size="normal" screentip="绘制多条函数、自动避让页面内容，或重新编辑所选函数图像"/>
+        </group>
+        <group id="licenseGroup" label="授权">
+          <button id="authorization_center" label="授权中心" onAction="OnAction" size="normal" screentip="查看到期时间、手动激活和联系方式"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

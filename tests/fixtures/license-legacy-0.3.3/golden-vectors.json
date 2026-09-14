@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "purpose": "synthetic-test-vectors-only",
+  "notice": "All machine IDs and activation codes in this file are synthetic test data, not customer data.",
+  "sourceVersion": "0.3.3",
+  "evaluationDate": "2026-07-16",
+  "machineId": "HSMTEST000001",
+  "foreignMachineId": "HSMOTHER00001",
+  "vectors": [
+    {
+      "id": "monthly-valid",
+      "code": "HSMM-2026-0816-HSMT-EST0-0000-11NY-ZXV6",
+      "expected": {
+        "valid": true,
+        "license": { "plan": "M", "expires": "20260816", "machineId": "HSMTEST000001", "signature": "1NYZXV6" },
+        "machineId": "HSMTEST000001"
+      }
+    },
+    {
+      "id": "quarterly-valid",
+      "code": "HSMQ-2026-1016-HSMT-EST0-0000-10V5-C087",
+      "expected": {
+        "valid": true,
+        "license": { "plan": "Q", "expires": "20261016", "machineId": "HSMTEST000001", "signature": "0V5C087" },
+        "machineId": "HSMTEST000001"
+      }
+    },
+    {
+      "id": "yearly-valid",
+      "code": "HSMY-2027-0716-HSMT-EST0-0000-11SY-ZPRG",
+      "expected": {
+        "valid": true,
+        "license": { "plan": "Y", "expires": "20270716", "machineId": "HSMTEST000001", "signature": "1SYZPRG" },
+        "machineId": "HSMTEST000001"
+      }
+    },
+    {
+      "id": "permanent-valid",
+      "code": "HSMP-PERM-ANEN-THSM-TEST-0000-010L-A837-8",
+      "expected": {
+        "valid": true,
+        "license": { "plan": "P", "expires": "PERMANENT", "machineId": "HSMTEST000001", "signature": "0LA8378" },
+        "machineId": "HSMTEST000001"
+      }
+    },
+    {
+      "id": "expired",
+      "code": "HSMM-2025-0201-HSMT-EST0-0000-1100-VNEH",
+      "expected": { "valid": false, "reason": "激活码已经过期。", "machineId": "HSMTEST000001" }
+    },
+    {
+      "id": "foreign-machine",
+      "code": "HSMY-2027-0716-HSMO-THER-0000-11G3-45HU",
+      "expected": { "valid": false, "reason": "激活码与本机机器码不匹配。", "machineId": "HSMTEST000001" }
+    },
+    {
+      "id": "signature-error",
+      "code": "HSMM-2026-0816-HSMT-EST0-0000-11NY-ZXV7",
+      "expected": { "valid": false, "reason": "激活码校验失败。", "machineId": "HSMTEST000001" }
+    },
+    {
+      "id": "format-error",
+      "code": "NOT-A-LICENSE",
+      "expected": { "valid": false, "reason": "激活码格式不正确。", "machineId": "HSMTEST000001" }
+    }
+  ]
+}

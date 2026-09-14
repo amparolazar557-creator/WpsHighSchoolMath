@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "purpose": "migration-tests-only",
+  "sourceVersion": "0.3.3",
+  "sourceChannel": "internal-test",
+  "generatedAtUtc": "2026-07-15T03:06:09.8641900Z",
+  "licenseSourceSnapshot": "license-0.3.3.js",
+  "licenseSourcePublishedSha256": "6bd7cbe504ef80faa8b56271b256ad70d05b1f2ce779b6d45478440cf9e7034b",
+  "artifacts": {
+    "zip": {
+      "file": "WpsHighSchoolMath-0.3.3-offline.zip",
+      "bytes": 654782,
+      "sha256": "7c5288325d8938a2cf6d3ea3a1dc36be11ae73877300a57d781dbe4873e0e6fa"
+    },
+    "exe": {
+      "file": "WpsHighSchoolMath-0.3.3-offline.exe",
+      "bytes": 528384,
+      "sha256": "f177585f3cb9747b0af25ac7631cf573eb2829fe555ec6868b1bcc3c9276178d"
+    }
+  },
+  "payloads": [
+    {
+      "name": "WpsHighSchoolMath",
+      "hostType": "wps",
+      "folder": "WpsHighSchoolMath_0.3.3",
+      "fileCount": 27,
+      "payloadSha256": "7deb6bc9a516dc0051efc74cbb2a1b1e3e240322db78339c66cfa9b86a6763f6",
+      "manifestSha256": "1372bbd922712afd7c7e4993132ab889f5f0d6200d54fa7ac5ee15c629953655",
+      "ribbonSha256": "d4197c1eb9ad9757979841aa4955304b2d6e69fea1a6083acbe49cf26cfc6d59"
+    },
+    {
+      "name": "WpsHighSchoolMathPpt",
+      "hostType": "wpp",
+      "folder": "WpsHighSchoolMathPpt_0.3.3",
+      "fileCount": 26,
+      "payloadSha256": "21ebd09e365ef1c1464d1d292d139d033fc6876ede49f01ee75c3340abc44405",
+      "manifestSha256": "4b95192e1fc3c93b0bf2ba61bb79d8731602bbd292adfe77f5bf9d6f60c105a3",
+      "ribbonSha256": "46177b49b4568a8aba789c7d8cd37102690d79a50ea69ad4f7f62ef0ec5e6930"
+    }
+  ],
+  "buildIsolation": {
+    "fixtureRoot": "tests/fixtures/license-legacy-0.3.3",
+    "mustNeverEnterCurrentPayload": true
+  }
+}

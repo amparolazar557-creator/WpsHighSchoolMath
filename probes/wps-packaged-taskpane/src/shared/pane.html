@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>包内静态任务窗格探针</title>
+    <style>
+      body { margin: 0; font-family: "Microsoft YaHei UI", sans-serif; color: #172033; background: #f4f7fb; }
+      main { margin: 18px; padding: 22px; border: 1px solid #dbe4f0; border-radius: 14px; background: #fff; box-shadow: 0 8px 24px rgba(34, 66, 110, .08); }
+      h1 { margin: 0 0 8px; font-size: 22px; }
+      p { line-height: 1.65; }
+      .badge { display: inline-block; padding: 5px 10px; border-radius: 999px; background: #e6f7ee; color: #12733f; font-weight: 700; }
+      code { display: block; margin-top: 14px; padding: 12px; border-radius: 8px; background: #f0f3f8; word-break: break-all; }
+      button { margin-top: 16px; padding: 9px 14px; border: 0; border-radius: 8px; background: #2563eb; color: #fff; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <span id="badge" class="badge">正在建立握手</span>
+      <h1>包内静态任务窗格</h1>
+      <p id="message">正在确认页面可见、WPS API 可访问且 PluginStorage 可以跨页面通信。</p>
+      <code id="details"></code>
+      <button id="retry" type="button">重新写入 ready</button>
+    </main>
+    <script src="./pane.js"></script>
+  </body>
+</html>

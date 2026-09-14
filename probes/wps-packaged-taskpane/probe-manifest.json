@@ -1,0 +1,25 @@
+{
+  "schema": "WpsHighSchoolMathPackagedTaskPaneProbe",
+  "version": 1,
+  "probeVersion": "0.0.1",
+  "commercialPayload": false,
+  "writer": {
+    "name": "WpsHsmPackagedTaskPaneProbeWriter",
+    "type": "wps",
+    "folder": "WpsHsmPackagedTaskPaneProbeWriter_0.0.1"
+  },
+  "presentation": {
+    "name": "WpsHsmPackagedTaskPaneProbePresentation",
+    "type": "wpp",
+    "folder": "WpsHsmPackagedTaskPaneProbePresentation_0.0.1"
+  },
+  "installedFiles": [
+    "index.html",
+    "main.js",
+    "manifest.xml",
+    "ribbon.xml",
+    "js/probe.js",
+    "pane.html",
+    "pane.js"
+  ]
+}

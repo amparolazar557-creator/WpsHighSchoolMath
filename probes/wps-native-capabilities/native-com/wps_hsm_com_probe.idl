@@ -1,0 +1,43 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+  uuid(903C67EF-5C8F-4E00-ACF4-E7931DDCF587),
+  version(1.0),
+  helpstring("WPS High School Math Native Dialog Probe Type Library")
+]
+library WpsHsmNativeDialogProbeLib
+{
+  importlib("stdole2.tlb");
+
+  [
+    uuid(7B4641C6-2E3B-4FBF-9611-52577CDDD0CA),
+    helpstring("WPS High School Math Native Dialog Automation")
+  ]
+  dispinterface IWpsHsmNativeDialogAutomation
+  {
+    properties:
+    methods:
+      [id(101)] BSTR GetBridgeVersion();
+      [id(102)] LONG GetProcessId();
+      [id(103)] BSTR GetProcessName();
+      [id(104)] LONG ShowInputDialog(
+        [in] BSTR title,
+        [in] BSTR prompt,
+        [in] BSTR initial,
+        [in] LONG maxChars);
+      [id(105)] BSTR GetLastResult();
+      [id(106)] LONG GetLastResultLength();
+      [id(107)] void ClearResult();
+      [id(108)] BSTR GetLastError();
+  };
+
+  [
+    uuid(76F85F17-71B3-40E2-A4CD-50B769FA37A7),
+    helpstring("WPS High School Math Native Dialog Probe")
+  ]
+  coclass WpsHsmNativeDialogProbe
+  {
+    [default] dispinterface IWpsHsmNativeDialogAutomation;
+  };
+};

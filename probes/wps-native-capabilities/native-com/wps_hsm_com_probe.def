@@ -1,0 +1,4 @@
+LIBRARY WpsHsmNativeDialogProbe
+EXPORTS
+    DllGetClassObject PRIVATE
+    DllCanUnloadNow PRIVATE

@@ -1,0 +1,9 @@
+LIBRARY HsmMathNativeProbe
+EXPORTS
+    OnWpsLoad
+    HsmProbeGetBridgeVersion
+    HsmProbeGetProcessId
+    HsmProbeShowInputDialog
+    HsmProbeGetLastResult
+    HsmProbeGetLastResultLength
+    HsmProbeClearResult

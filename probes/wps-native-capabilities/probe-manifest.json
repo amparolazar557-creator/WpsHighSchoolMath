@@ -1,0 +1,48 @@
+{
+  "schema": "WpsHighSchoolMathNativeCapabilityProbe",
+  "version": 6,
+  "probeVersion": "0.0.6",
+  "commercialPayload": false,
+  "formalWhitelistEligible": false,
+  "hardGate": {
+    "nativeDialogBridge": "Application.CreateObject+NativeX.OnWpsLoad+x86-inprocess-native-dialog",
+    "bridgeAbi": "NativeX-OnWpsLoad-1.1",
+    "nativeXModule": "hsmmathnativeprobe",
+    "nativeXEntry": "OnWpsLoad",
+    "nativeXConfig": "kingsoft/wps/jsaddons/binary/WPSNativeX.conf",
+    "nativeXBinary": "native/bin/x86/HsmMathNativeProbe.dll",
+    "nativeInputApis": [
+      "global.InputBox",
+      "Application.InputBox"
+    ],
+    "requiredFileApis": [
+      "writeAsBinaryString",
+      "readAsBinaryString"
+    ],
+    "storageEncoding": "ES5-UTF8-Base64",
+    "legacyDiagnosticTransportApis": [
+      "writeFileString",
+      "readFileString",
+      "WriteFile",
+      "ReadFile"
+    ],
+    "legacyTransportCanPass": false
+  },
+  "writer": {
+    "name": "WpsHsmNativeCapabilityProbeWriter",
+    "type": "wps",
+    "folder": "WpsHsmNativeCapabilityProbeWriter_0.0.6"
+  },
+  "presentation": {
+    "name": "WpsHsmNativeCapabilityProbePresentation",
+    "type": "wpp",
+    "folder": "WpsHsmNativeCapabilityProbePresentation_0.0.6"
+  },
+  "installedFiles": [
+    "index.html",
+    "main.js",
+    "manifest.xml",
+    "ribbon.xml",
+    "js/probe.js"
+  ]
+}

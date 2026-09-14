@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnAddinLoad">
+  <ribbon startFromScratch="false">
+    <tabs>
+      <tab id="hsmPackagedTaskPaneProbeWriterTab" label="Writer 包内页面探针">
+        <group id="hsmPackagedTaskPaneProbeWriterGroup" label="方案 B：零本机 HTTP">
+          <button id="probe_open_packaged_pane" label="打开包内静态页面" onAction="OnProbeAction" size="large"/>
+          <button id="probe_refresh_packaged_status" label="刷新握手状态" onAction="OnProbeAction" size="normal"/>
+          <labelControl id="probe_packaged_status" getLabel="GetProbeStatus"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

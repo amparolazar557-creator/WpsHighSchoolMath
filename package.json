@@ -1,0 +1,7 @@
+{
+  "name": "WpsHighSchoolMath",
+  "version": "0.8.1",
+  "description": "WPS Writer 和 Presentation 高中数学快捷符号、函数图像、试卷模板和文档排版插件",
+  "addonType": "wps",
+  "customDomain": false
+}

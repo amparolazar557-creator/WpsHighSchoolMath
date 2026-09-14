@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnAddinLoad">
+  <ribbon startFromScratch="false">
+    <tabs>
+      <tab id="hsmNativeProbeWriterTab" label="Writer 原生能力探针">
+        <group id="probeInProcessDialogGroup" label="方案一：进程内原生对话框">
+          <button id="probe_open_native_dialog" label="打开进程内原生对话框" onAction="OnProbeAction" size="large"/>
+          <labelControl id="probe_native_dialog_status" getLabel="GetProbeNativeDialogStatus"/>
+        </group>
+        <group id="probeNativeInputGroup" label="WPS 原生输入框">
+          <labelControl id="probe_instruction" getLabel="GetProbeInstructionLabel"/>
+          <button id="probe_open_input" label="打开原生输入框" onAction="OnProbeAction" size="large"/>
+          <button id="probe_mark_visible" label="Tab 显示正常" onAction="OnProbeAction" size="normal"/>
+          <labelControl id="probe_ribbon_status" getLabel="GetProbeRibbonStatus"/>
+        </group>
+        <group id="probeFileGroup" label="共享文件">
+          <button id="probe_run_files" label="运行二进制共享文件探针" onAction="OnProbeAction" size="large"/>
+          <labelControl id="probe_file_status" getLabel="GetProbeFileStatus"/>
+        </group>
+        <group id="probeSummaryGroup" label="记录">
+          <button id="probe_show_summary" label="显示本宿主摘要" onAction="OnProbeAction" size="normal"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

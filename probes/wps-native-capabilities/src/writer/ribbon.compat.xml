@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnAddinLoad">
+  <ribbon startFromScratch="false">
+    <tabs>
+      <tab id="hsmNativeProbeWriterCompatTab" label="Writer 兼容诊断">
+        <group id="probeCompatStatusGroup" label="诊断状态">
+          <labelControl id="probe_compat_status" getLabel="GetCompatStatusLabel"/>
+          <labelControl id="probe_compat_machine" getLabel="GetCompatMachineCodeLabel"/>
+          <labelControl id="probe_compat_qq" getLabel="GetCompatQqLabel"/>
+          <labelControl id="probe_compat_wechat" getLabel="GetCompatWechatLabel"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

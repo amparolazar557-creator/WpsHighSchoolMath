@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JsPlugin>
+  <ApiVersion>1.0.0</ApiVersion>
+  <Name>WpsHsmNativeCapabilityProbeWriter</Name>
+  <Description>Writer 原生 Ribbon 与共享文件能力隔离探针</Description>
+</JsPlugin>

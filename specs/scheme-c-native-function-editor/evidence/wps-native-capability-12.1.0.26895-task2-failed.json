@@ -1,0 +1,139 @@
+{
+    "schema":  "WpsHighSchoolMathNativeCapabilityEvidence",
+    "version":  2,
+    "status":  "failed",
+    "recordedAt":  "2026-07-16T15:33:02.4152263+00:00",
+    "runId":  "061d4179-fad9-458f-8c4a-a145b8ce5f4b",
+    "startedAt":  "2026-07-16T15:33:01.7809109+00:00",
+    "commercialPayload":  false,
+    "formalWhitelistEligible":  false,
+    "checks":  {
+                   "runIdentity":  true,
+                   "writerExecutable":  true,
+                   "presentationExecutable":  true,
+                   "matchingWpsBuild":  true,
+                   "writerRecord":  false,
+                   "presentationRecord":  false,
+                   "installedPayloads":  false,
+                   "continuousMonitoring":  false
+               },
+    "failures":  [
+                     {
+                         "code":  "writer-record-invalid",
+                         "message":  "writer record is missing required property \u0027runId\u0027."
+                     },
+                     {
+                         "code":  "presentation-record-invalid",
+                         "message":  "presentation record is missing required property \u0027runId\u0027."
+                     },
+                     {
+                         "code":  "installed-payload-invalid",
+                         "message":  "writer installed payload hash mismatch: js/probe.js"
+                     },
+                     {
+                         "code":  "continuous-monitor-unverifiable",
+                         "message":  "Continuous monitor evidence requires run identity and both host records."
+                     }
+                 ],
+    "wpsBuild":  {
+                     "fileVersion":  "12,1,0,26895",
+                     "productVersion":  "12,1,0,26895",
+                     "writer":  {
+                                    "path":  "D:\\Program Files (x86)\\WPS Office\\WPS Office\\12.1.0.26895\\office6\\wps.exe",
+                                    "fileVersion":  "12,1,0,26895",
+                                    "productVersion":  "12,1,0,26895",
+                                    "sha256":  "a79c853937fd557f701bf596cd118a856ade9f008b1ab40a51a86ca0841e6935"
+                                },
+                     "presentation":  {
+                                          "path":  "D:\\Program Files (x86)\\WPS Office\\WPS Office\\12.1.0.26895\\office6\\wpp.exe",
+                                          "fileVersion":  "12,1,0,26895",
+                                          "productVersion":  "12,1,0,26895",
+                                          "sha256":  "d64bfaa6aa03d79e43f4a15ce25eae1aa1ffeb23771d0abe74a148392b515ba6"
+                                      }
+                 },
+    "hosts":  {
+                  "writer":  null,
+                  "presentation":  null
+              },
+    "installedPayloads":  null,
+    "continuousMonitoring":  null,
+    "probeFiles":  [
+                       {
+                           "file":  "probe-manifest.json",
+                           "sha256":  "b8b7413b20353e30bfd75b7e0287faa4b18e7a7cbe7abe804eab88e15f80df08"
+                       },
+                       {
+                           "file":  "README.md",
+                           "sha256":  "abee10e6e9b39a881024e97f1bb7199c12b194a78dba4cf5eba00100bdfe8ec1"
+                       },
+                       {
+                           "file":  "scripts/install-native-capability-probe.ps1",
+                           "sha256":  "4046db5b3cf2c3b504a77b477a6153fb3be6d70dd1af3910e77f422af9ac3cc8"
+                       },
+                       {
+                           "file":  "scripts/probe-common.ps1",
+                           "sha256":  "156ff7fa085a548b215820da102e1da6ba599cb64b2f428de1138b4458580ae6"
+                       },
+                       {
+                           "file":  "scripts/record-native-capability-result.ps1",
+                           "sha256":  "0b7d279035a08bbb14894a065aaa03b99bf782a84d5e0382e66ba5b5db4a335d"
+                       },
+                       {
+                           "file":  "scripts/run-native-capability-probe.ps1",
+                           "sha256":  "cc43bbb2f9ce95e42c0c94543e76fab693fd69714fc8d9a6cf5381b97d6b973e"
+                       },
+                       {
+                           "file":  "scripts/uninstall-native-capability-probe.ps1",
+                           "sha256":  "93a400332482f979b918f34a0bb930575cfbb7618bb59bb3fdd2a3d9e7398a99"
+                       },
+                       {
+                           "file":  "scripts/validate-native-capability-probe.ps1",
+                           "sha256":  "9903266503329052a0d8b4ceda1603ec74bb02d19c042b319da5a282d668863e"
+                       },
+                       {
+                           "file":  "src/presentation/index.html",
+                           "sha256":  "2eb4a05932244186cfb9ba9c29382bfa966f71d5745108ef097b16905eeeab6a"
+                       },
+                       {
+                           "file":  "src/presentation/main.js",
+                           "sha256":  "9e8c422cf4b576f6735f689038c80d1f8299357242a8d6a12535152cbe15f115"
+                       },
+                       {
+                           "file":  "src/presentation/manifest.xml",
+                           "sha256":  "727602595cf56eaaf32f5effebbe13689c2bc542b8469b62dfb03142bf44b920"
+                       },
+                       {
+                           "file":  "src/presentation/ribbon.compat.xml",
+                           "sha256":  "a8331c7ca2e4264c4f2dfd85169433ae839830ba6889c194b47e227c9cae6a52"
+                       },
+                       {
+                           "file":  "src/presentation/ribbon.xml",
+                           "sha256":  "2460d5c085a74095fef3f9344d01eefa9b2d07a4898f3fe6d66a2b0522db3c56"
+                       },
+                       {
+                           "file":  "src/shared/probe.js",
+                           "sha256":  "057c3170cfff6bda1beb0f2c3ec47cb9ce28bccd6fbf89438f80a53a65582b7f"
+                       },
+                       {
+                           "file":  "src/writer/index.html",
+                           "sha256":  "d3115d28276bbb3496094828ad4b6dfa9a07af0acc61ebf779303152c77535fb"
+                       },
+                       {
+                           "file":  "src/writer/main.js",
+                           "sha256":  "9e8c422cf4b576f6735f689038c80d1f8299357242a8d6a12535152cbe15f115"
+                       },
+                       {
+                           "file":  "src/writer/manifest.xml",
+                           "sha256":  "61fe14b306b7b220a009595acd4009a5a59bc9357c7dc19df15fee376b9ce026"
+                       },
+                       {
+                           "file":  "src/writer/ribbon.compat.xml",
+                           "sha256":  "cd8a0d6d02ac8b93e538d369695136cef67532bb52a310f8d714da1e9558ab8a"
+                       },
+                       {
+                           "file":  "src/writer/ribbon.xml",
+                           "sha256":  "52bc81eda0718f399387c7c572c8c4d2206b54abd98d319703cd17dd5b913997"
+                       }
+                   ],
+    "decision":  "Task 2 hard gate failed. Do not begin dependent implementation or generate a supported-build candidate."
+}
